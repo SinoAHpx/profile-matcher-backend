@@ -7,6 +7,7 @@ from src.auth.routes import router as auth_router
 from src.routes.teams import router as teams_router
 from dotenv import load_dotenv
 
+
 load_dotenv(override=True)
 
 # Create FastAPI application
