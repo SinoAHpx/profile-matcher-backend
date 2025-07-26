@@ -59,6 +59,20 @@ class HobbyReference(BaseModel):
     name: str
     category: str
 
+# Interest related models (for API compatibility)
+class Interest(BaseModel):
+    id: str
+    name: str
+
+class InterestsResponse(BaseModel):
+    interests: List[Interest]
+
+class UpdateInterestsRequest(BaseModel):
+    interest_ids: List[str]
+
+class UpdateInterestsResponse(BaseModel):
+    interest_ids: List[str]
+
 # Team related models
 class EventBase(BaseModel):
     id: str

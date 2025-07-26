@@ -233,7 +233,6 @@ async def get_avatar_by_email(email: str):
     """
     try:
         admin_client = get_supabase_admin_client()
-        
         # 通过邮箱查找用户ID
         auth_users = admin_client.auth.admin.list_users()
         user_found = None

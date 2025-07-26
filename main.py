@@ -5,6 +5,7 @@ from loguru import logger
 from src.config.settings import settings, allowed_origins
 from src.auth.routes import router as auth_router
 from src.routes.teams import router as teams_router
+from src.routes.interests import router as interests_router
 from dotenv import load_dotenv
 
 
@@ -31,6 +32,7 @@ app.add_middleware(
 # Include routers
 app.include_router(auth_router)
 app.include_router(teams_router)
+app.include_router(interests_router)
 
 @app.get("/")
 async def root():
